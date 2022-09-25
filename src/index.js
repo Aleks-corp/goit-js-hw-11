@@ -26,6 +26,7 @@ async function onFormElSubmit(evt) {
       return;
     }
     refs.loadMoreBtn.classList.add('hidden');
+    pageConst.page = 1;
     const response = await getPhoto(pageConst.page, pageConst.searchValue);
 
     if (response.hits.length === 0) {
